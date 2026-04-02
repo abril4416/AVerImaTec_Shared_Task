@@ -248,8 +248,8 @@ def compute_image_scores(model,model_name,pred_evid,ref_evid,score):
             imgs_ref=ref_evid[ref_idx-1]['images']
             if len(imgs_pred)==0 and len(imgs_ref)==0:
                 feedback='10'
-            elif len(imgs_pred)==0 or len(imgs_ref)==0:
-                feedback='0'
+            #elif len(imgs_pred)==0 or len(imgs_ref)==0:
+            #    feedback='0'
             else:
                 if 'gemini' in model_name:
                     inputs=[prompt]
@@ -322,8 +322,8 @@ def compute_image_scores(model,model_name,pred_evid,ref_evid,score):
             imgs_ref=ref_evid[ref_idx-1]['images']
             if len(imgs_pred)==0 or len(imgs_ref)==0:
                 feedback='10'
-            elif len(imgs_pred)==0 or len(imgs_ref)==0:
-                feedback='0'
+            #elif len(imgs_pred)==0 or len(imgs_ref)==0:
+            #    feedback='0'
             else:
                 if 'gemini' in model_name:
                     inputs=[prompt]
